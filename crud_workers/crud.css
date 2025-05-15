@@ -1,0 +1,211 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4a4e69, #22223b);
+    color: #fff;
+    padding: 30px;
+    animation: fadeInBody 0.5s ease-in-out;
+}
+
+/* Animações */
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Cabeçalho */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+    animation: slideIn 0.6s ease-in-out;
+}
+
+/* Botões */
+.btn {
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-add {
+    background-color: #09c50f;
+}
+
+.btn-add:hover {
+    background-color: #c9ada7;
+}
+
+.btn-logout {
+    background-color: #ae081b;
+    font-size: 16px;
+}
+
+.btn-logout:hover {
+    background-color: #c9ada7;
+}
+
+.btn-edit {
+    background-color: #c0392b;
+}
+
+.btn-edit:hover {
+    background-color: #c9ada7;
+}
+
+.btn-delete {
+    background-color: #c0392b;
+}
+
+.btn-delete:hover {
+    background-color: #c9ada7;
+}
+
+/* Tabelas */
+table.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+    animation: fadeInBody 0.6s ease;
+}
+
+table.dataTable th, table.dataTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    color: #fff;
+}
+
+table.dataTable thead {
+    background-color: #4a4e69;
+    color: white;
+}
+
+table.dataTable tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: fadeInModal 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #22223b;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInModal 0.4s ease;
+}
+
+/* Inputs */
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+form input:focus, form select:focus {
+    border-color: #9a8c98;
+    outline: none;
+}
+
+/* Modal Header */
+.name-button, .name_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.name-button h2, .name_button h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #22223b;
+}
+
+/* Botão Fechar */
+.close-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #96281b;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+
+    table.dataTable th, table.dataTable td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,125 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Estilos do body */
+  body {
+      height: 100vh;
+      background: linear-gradient(135deg, #4a4e69, #22223b); /* Degradê similar ao do welcome e register */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Estilos do container de login */
+  .login-container {
+      background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil transparente */
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      animation: slideIn 0.8s ease-in-out;
+      max-width: 400px;
+      width: 100%;
+      box-sizing: content-box;
+  }
+  
+  /* Títulos */
+  h1 {
+      font-size: 2.5rem;
+      color: #ffffff; /* Título em branco */
+      margin-bottom: 15px;
+  }
+  
+  h2 {
+      font-size: 1.8rem;
+      color: #f4f4f4; /* Subtítulo em cinza claro */
+      margin-bottom: 25px;
+  }
+  
+  /* Estilos dos labels e inputs */
+  label {
+      display: block;
+      margin-bottom: 5px;
+      color: #fdfdfd;
+      font-weight: 500;
+  }
+  
+  input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: none;
+      background-color: #f4f4f4;
+      color: #000;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+  }
+  
+  input:focus {
+      outline: none;
+      box-shadow: 0 0 5px #c9ada7;
+  }
+  
+  /* Botão de login */
+  button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #9a8c98; /* Cor suave */
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+      background-color: #c9ada7; /* Cor mais clara no hover */
+  }
+  
+  /* Link de registro */
+  p {
+      font-size: 1rem;
+      color: #f4f4f4; /* Texto em cinza claro */
+      margin-top: 20px;
+  }
+  
+  .register-link {
+      color: #9a8c98; /* Cor suave no link */
+      text-decoration: none;
+      font-weight: bold;
+  }
+  
+  .register-link:hover {
+      color: #c9ada7; /* Cor mais clara no hover */
+  }
+  
+  /* Animações */
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  
+  @keyframes slideIn {
+      from {
+          transform: translateY(-20px);
+          opacity: 0;
+      }
+      to {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+  

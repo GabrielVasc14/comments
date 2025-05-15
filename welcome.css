@@ -1,0 +1,87 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo do corpo */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #4a4e69, #22223b); /* Degradê de tons mais escuros */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo do cabeçalho */
+.welcome-container {
+    background-color: rgba(255, 255, 255, 0.1); /* fundo sutil transparente */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: slideIn 0.8s ease-in-out;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: content-box;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff; /* Título em branco */
+    margin-bottom: 15px;
+}
+
+/* Parágrafo */
+p {
+    font-size: 1.1rem;
+    color: #f4f4f4; /* Texto em cinza claro para contraste */
+    margin-bottom: 25px;
+}
+
+/* Botões */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons a {
+    text-decoration: none;
+    background-color: #9a8c98; /* Cor similar ao botão do register.css */
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: #fff; /* Texto branco */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons a:hover {
+    background-color: #c9ada7; /* Cor um pouco mais clara quando hover */
+    transform: scale(1.05);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

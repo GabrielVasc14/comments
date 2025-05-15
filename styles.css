@@ -1,0 +1,338 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body base */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 40px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Temas */
+body.dark {
+    background: linear-gradient(135deg, #4a4e69, #22223b);
+    color: #fff;
+}
+
+body.light {
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+    color: #222;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: inherit;
+}
+
+/* Container principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    animation: slideIn 0.8s ease;
+}
+
+body.light .container {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Botões */
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-logout {
+    background-color: #ae081b;
+    margin-top: 20px;
+}
+
+.btn-add {
+    background-color: #09c50f;
+    margin-top: 20px;
+}
+
+.btn-edit,
+.btn-delete {
+    background-color: #c0392b;
+    margin-right: 10px;
+}
+
+.btn-logout:hover,
+.btn-add:hover,
+.btn-edit:hover,
+.btn-delete:hover {
+    background-color: #c9ada7;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.btn-theme {
+    background-color: #6c5ce7;
+    margin-top: 20px;
+}
+
+.btn-theme:hover {
+    background-color: #4834d4;
+    transform: scale(1.05);
+}
+
+/* Tabela de comentários */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: transparent;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    color: inherit;
+}
+
+th {
+    background-color: #4a4e69;
+    color: #fff;
+}
+
+body.light th {
+    background-color: #dfe4f2;
+    color: #222;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.light tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Cards */
+/* Estilos para o card */
+.card {
+    border-radius: 8px; /* Arredondar as bordas do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para os cards */
+    margin-bottom: 20px; /* Espaço entre os cards */
+    background-color: #fff; /* Cor de fundo dos cards */
+}
+
+/* Estilo do título do card */
+.card-title {
+    font-size: 1.25rem; /* Tamanho da fonte do título */
+    font-weight: bold; /* Negrito no título */
+    color: #333; /* Cor do texto no título */
+    margin-bottom: 10px; /* Espaço inferior do título */
+}
+
+/* Estilo do texto do card */
+.card-text {
+    font-size: 1rem; /* Tamanho da fonte do texto */
+    color: #555; /* Cor do texto */
+    line-height: 1.5; /* Espaçamento entre as linhas */
+}
+
+/* Para o tema escuro */
+.dark .card-title {
+    color: #000000be; /* Título claro no tema escuro */
+}
+
+.dark .card-text {
+    color: #000000be; /* Texto claro no tema escuro */
+}
+
+/* Para o tema claro */
+.light .card-title {
+    color: #333; /* Título escuro no tema claro */
+}
+
+.light .card-text {
+    color: #555; /* Texto escuro no tema claro */
+}
+
+/* Estilo do card-body */
+.card-body {
+    padding: 20px; /* Padding dentro do card */
+}
+
+/* Estilos para o botão dentro do card */
+.card-body .btn {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 15px; /* Padding do botão */
+    border-radius: 4px; /* Arredondar bordas do botão */
+    text-align: center; /* Alinhar texto ao centro */
+    text-decoration: none; /* Remover underline */
+    transition: background-color 0.3s ease-in-out; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.card-body .btn:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilos para os ícones (Font Awesome) no título */
+.card-title i {
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+    color: #007bff; /* Cor do ícone */
+}
+
+/* Para o tema escuro */
+.dark .card-body .btn {
+    background-color: #444; /* Cor do botão no tema escuro */
+}
+
+.dark .card-body .btn:hover {
+    background-color: #666; /* Cor do botão ao passar o mouse no tema escuro */
+}
+
+.dark .card-title i {
+    color: #ccc; /* Cor do ícone no tema escuro */
+}
+
+/* Para o tema claro */
+.light .card-body .btn {
+    background-color: #ae081b; /* Cor do botão no tema claro */
+}
+
+.light .card-body .btn:hover {
+    background-color: #be0a1f; /* Cor do botão ao passar o mouse no tema claro */
+}
+
+.light .card-title i {
+    color: #333; /* Cor do ícone no tema claro */
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: fadeInModal 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #22223b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light .modal-content {
+    background-color: #f9f9f9;
+    color: #1a1a1a;
+}
+
+/* Inputs */
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Botão do modal */
+.modal-content button {
+    background-color: #9a8c98;
+    border: none;
+    width: 100%;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.modal-content button:hover {
+    background-color: #c9ada7;
+    transform: scale(1.05);
+}
+
+/* Botão fechar modal */
+.close-btn {
+    cursor: pointer;
+    font-size: 20px;
+    color: #c0392b;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close-btn:hover {
+    color: #96281b;
+}
+
+/* Animações */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ScrollBar */
+/* Personaliza a barra de rolagem em si */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+    height: 12px; /* Altura da barra de rolagem */
+}
+
+/* Personaliza o fundo da barra de rolagem */
+::-webkit-scrollbar-track.dark {
+    background-color: #4a4e69; /* Cor do fundo da barra de rolagem */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Personaliza o "thumb" (a parte que o usuário arrasta) */
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor do thumb */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Quando o usuário passa o mouse sobre o thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cor do thumb ao passar o mouse */
+}

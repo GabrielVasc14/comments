@@ -1,0 +1,141 @@
+/* Reset básico para evitar conflitos */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+    color: #212529;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.btn-logout {
+    float: right;
+    margin-bottom: 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.btn-logout:hover {
+    background-color: #c82333;
+}
+
+.btn-add {
+    margin-bottom: 20px;
+    background-color: #198754;
+    color: white;
+    border: none;
+}
+
+.btn-add:hover {
+    background-color: #157347;
+}
+
+.table {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.table th {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.modal-content {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: #212529;
+    border: none;
+    margin-right: 5px;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.btn-delete:hover {
+    background-color: #bb2d3b;
+}
+
+.modal-dialog {
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.modal-header {
+    background-color: #0d6efd;
+    color: white;
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+input.form-control {
+    border-radius: 0.25rem;
+    box-shadow: none;
+    border: 1px solid #ced4da;
+}
+
+label.form-label {
+    font-weight: 500;
+}
+
+.toast-bottom-right {
+    bottom: 1rem;
+    right: 1rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-logout {
+        float: none;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn-add {
+        width: 100%;
+    }
+}
+/* --- Animações para modais --- */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: translateY(0);
+    opacity: 1;
+}
